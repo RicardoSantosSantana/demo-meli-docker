@@ -1,1 +1,4 @@
 /database/mysql
+.env
+/api-lumen
+/mysql

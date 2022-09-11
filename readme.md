@@ -32,3 +32,20 @@ Para funcionar é necessário ter o composer instalado na máquina de destino, o
 
   ###  **client_secret**
     a Chave secreta fornecida quando cria ao aplicativo
+
+  ## Executar o container
+
+  docker-compose up -d --build
+
+  ## PORTAS
+    
+  ### **mysql**
+    
+    http://localhost:8085
+  
+  ### **api**
+    
+    Pode ser acessada no navegador para visualizar a documentação
+    http://localhost:8000
+
+
