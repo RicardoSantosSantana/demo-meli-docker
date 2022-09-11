@@ -1,41 +1,35 @@
 version: "3.0"
 services:
- 
   mysql:
-    image: rssantan/mysql8dev     
-    env_file:
-      ./.env 
+    image: rssantan/mysql8dev
+    env_file: ./.env
     ports:
       - "3306:3306"
-    volumes: 
-       - ./mysql:/var/lib/mysql
-       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - node-network
-
   php:
-    image: rssantan/php8.1dev:1.0    
-    restart: unless-stopped    
-    env_file:
-      ./.env 
+    image: rssantan/php8.1dev:1.0
+    restart: unless-stopped
+    env_file: ./.env
     links:
       - "mysql"
     ports:
       - "8000:80"
     volumes:
       - ./api-lumen:/var/www/
-    working_dir: /var/www/  
+    working_dir: /var/www/
     entrypoint: php -S 0.0.0.0:80 -t public
     networks:
       - node-network
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: pma
     links:
       - mysql
-    env_file:
-      ./.env 
+    env_file: ./.env
     restart: always
     ports:
       - 8085:80
