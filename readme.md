@@ -11,10 +11,6 @@ Para funcionar é necessário ter o composer instalado na máquina de destino, o
     sudo chmod +x install.sh
     
     ./install.sh
-### acesse o link abaixo e informe o Client ID para preencher o .env
+**acesse o link abaixo e informe o Client ID para preencher o .env**
 
     https://code.ricardo.dev.br/
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
