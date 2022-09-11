@@ -21,7 +21,7 @@ services:
     links:
       - "mysql"
     ports:
-      - "80:80"
+      - "8000:80"
     volumes:
       - ./api-lumen:/var/www/
     working_dir: /var/www/  
