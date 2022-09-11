@@ -14,3 +14,21 @@ Para funcionar é necessário ter o composer instalado na máquina de destino, o
 **acesse o link abaixo e informe o Client ID para preencher o .env**
 
     https://code.ricardo.dev.br/
+
+## Parametros do Sistema
+
+  **é necessário preencher o .env gerado após a execução do install.sh**
+  
+ ### **client_id**
+    É o id do aplicativo que você cria na plataforma do mercado livre
+    url: https://developers.mercadolivre.com.br/devcenter
+  
+  ### **redirect_url**
+    É a URI de redirect é que cadastrou no aplicativo em nosso caso de demonstração
+    https://code.ricardo.dev.br
+  
+  ###  **state**
+    É um número aleatorio gerado por vc mesmo
+
+  ###  **client_secret**
+    a Chave secreta fornecida quando cria ao aplicativo
