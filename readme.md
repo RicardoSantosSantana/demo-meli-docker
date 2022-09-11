@@ -7,9 +7,10 @@ Este é um projeto de demonstração de consumo da api do mercado livre.
 Para funcionar é necessário ter o composer instalado na máquina de destino, o script de instalação foi desenvolvido para rodar em linux.
 
 **no terminal**
-
-sudo chmod +x install.sh
-./install.sh
+    
+    sudo chmod +x install.sh
+    
+    ./install.sh
 
 ## License
 
