@@ -19,7 +19,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./api-lumen:/var/www/
+      - ./meli-api-lumen:/var/www/
     working_dir: /var/www/
     entrypoint: php -S 0.0.0.0:80 -t public
     networks:
@@ -40,6 +40,17 @@ services:
       - PMA_PORT=${MYSQL_PORT}
       - DATABASE_DRIVER=pdo_mysql
       - PMA_ARBITRARY=1
+  appgo:
+    container_name: appgo
+    build: ./meli-golang-background-process/.
+    networks:
+      - node-network
+    tty: true
+    links:
+      - mysql
+    env_file: ./.env
+    depends_on:
+      - mysql
 networks:
   node-network:
     driver: bridge

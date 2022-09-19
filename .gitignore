@@ -2,3 +2,5 @@
 .env
 /api-lumen
 /mysql
+/meli-api-lumen
+/meli-golang-background-process
